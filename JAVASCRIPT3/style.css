@@ -1,0 +1,61 @@
+/* Estilo geral da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #1c1c1c;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Contêiner do jogo */
+#jogo {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #2c2c2c;
+    border: 3px solid #4caf50;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.5);
+}
+
+/* Estilo do avatar */
+#avatar {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#avatar:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do avatar ao passar o mouse */
+}
+
+/* Bola de fogo */
+#bolaDeFogo {
+    position: absolute;
+    left: 120px;
+    bottom: 45px;
+    width: 50px;
+    animation: movimentoBola 1s linear forwards;
+}
+
+/* Animação da bola de fogo */
+@keyframes movimentoBola {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(400px); /* Bola de fogo se move para a direita */
+    }
+}
+
+/* Efeito de luz ao usar magia */
+#jogo.raduqui-ativo {
+    box-shadow: 0px 0px 30px rgba(255, 100, 0, 0.7);
+}
